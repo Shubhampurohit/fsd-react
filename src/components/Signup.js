@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
   const [name, setName] = useState();
@@ -12,7 +12,7 @@ function Signup() {
   const [passwordError, setPasswordError] = useState(false);
   const [mobileNumberError, setMobileNumberError] = useState(false);
 
-  const navigate = useNavigation;
+  const navigate = useNavigate();
 
   const signupUser = async () => {
     if (!name || name == "") {
